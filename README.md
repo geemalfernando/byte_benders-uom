@@ -47,7 +47,7 @@ The first run generates the synthetic data and trains every agent, which takes a
 | `python project/main.py check "<text>" [--sender ID] [--json]` | Check one message and show every agent's output |
 | `python project/main.py demo` | `project/samples/input/*.txt` → `project/samples/output/*.json` |
 | `python project/main.py benchmark` | Multi-agent vs single-agent → `project/reports/benchmark.{json,md}` |
-| `python project/main.py human-sheet` / `human-score FILE` | Blind sheet and scorer for the human baseline |
+| `python project/main.py human-sheet` / `human-score FILES` | Balanced 40-message rating page (`rate.html`) and scorer: humans vs both systems |
 | `python project/main.py serve --port 8080` | JSON API: `POST /check {"text": "...", "sender": "..."}`, `GET /health` |
 | `python project/main.py review` / `label ID scam\|legitimate` | Human review queue and reviewer decisions (scam links go to the blocklist) |
 | `python project/main.py retrain` / `rollback` | Gated retraining with reviewed labels; restore previous version |
@@ -71,7 +71,7 @@ Produced by `python project/main.py benchmark`. Full table: [project/reports/ben
 
 \*The stress set was written while the link rules were being designed, so it is not an unbiased estimate.
 The costs of the multi-agent design: about 9–14 ms per message instead of about 2 ms, and a higher human-review
-load on the independent set (41.5% vs 29.2%). The human baseline has not been run yet; the sheet is ready.
+load on the independent set (41.5% vs 29.2%). The human baseline has not been run yet: the timed rating page and scorer are ready ([docs/HUMAN_BASELINE.md](docs/HUMAN_BASELINE.md)).
 
 ## Repository layout
 

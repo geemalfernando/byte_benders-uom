@@ -32,7 +32,7 @@ Repository: https://github.com/geemalfernando/byte_benders-uom (private)
 
 ## Before 29 Nov
 
-- [ ] Human baseline: `python project/main.py human-sheet`; 4 raters fill `project/reports/human_baseline/sheet.csv` (copy per rater); score with `human-score`
+- [ ] Human baseline: send 4+ raters (not team members; one aged 50+, one Tamil reader) the rating page https://claude.ai/artifact/RbskfqH4u3itNjybroGJ2A or `rate.html`; save each result code in `project/reports/human_baseline/raters/`; run `human-score`; commit results (see `docs/HUMAN_BASELINE.md`)
 - [ ] Native-speaker check of Sinhala/Tamil replies (`decision.py`) and cue lists (`lexicons.py`)
 - [ ] Final `python project/main.py benchmark`; commit `project/reports/`
 - [ ] Record `project-demo.mp4`: problem → architecture → live `check` and `demo` → trace → benchmark → review loop (`review`, `label`, `retrain`)

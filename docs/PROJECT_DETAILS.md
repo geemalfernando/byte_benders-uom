@@ -22,7 +22,7 @@
 | JSONL traces of every agent post and decision | Built |
 | Human review queue (redacted), labels, audit log | Built (`review`, `label`); review UI in progress |
 | Single-agent baseline and benchmark harness, failure injection, throughput | Built |
-| Human baseline sheet and scorer | Built; ratings not yet collected |
+| Human baseline: balanced 40-message timed rating page, scorer vs both systems | Built; ratings not yet collected (protocol in `docs/HUMAN_BASELINE.md`) |
 | Gated retraining, blocklist growth from labels, rollback | Built (`retrain`, `rollback`; gate from the pre-existing code) |
 | WhatsApp bot channel | Planned (Meta Cloud API webhook calling `POST /check`) |
 

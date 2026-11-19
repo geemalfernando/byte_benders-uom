@@ -35,7 +35,7 @@ See `docs/PROJECT_DETAILS.md` (agent table) and `docs/Workflow.md` (decision rul
 | Multi-agent vs single agent | Same data, model, thresholds and retry budget; 4 datasets; `python project/main.py benchmark` | Done, re-run before submission |
 | Robustness | Each agent attempt fails with p = 0.3 and 0.6 | Done |
 | Throughput and cost | 1 and 4 workers; USD per 1,000 messages on a USD 24/month server | Done; process workers planned |
-| Human baseline | 4 raters × the same 40-message blind sheet, timed; `human-sheet` and `human-score` | Planned 21–24 Nov |
+| Human baseline | 4+ raters × the same balanced 40 messages on a timed rating page; `human-score` compares with both systems | Tooling built; ratings 21–24 Nov |
 | Per-language quality | English, Sinhala, Singlish, Tamil, Tanglish | Done |
 | Learning loop | Label UNCERTAIN messages → retrain → gate decision logged | Working end to end |
 

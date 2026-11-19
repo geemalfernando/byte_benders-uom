@@ -28,8 +28,8 @@ comparison is like for like.
 
 1. Generate the page (already in the repo): `python project/main.py human-sheet` →
    `project/reports/human_baseline/rate.html` (paper fallback: `sheet.csv`).
-2. Share the page link (published as a private claude.ai artifact; share it from claude.ai), or send the
-   `rate.html` file itself.
+2. Share the rating page: https://claude.ai/artifact/RbskfqH4u3itNjybroGJ2A (private until the owner turns on
+   sharing from claude.ai), or send the `rate.html` file itself, which works offline in any phone browser.
 3. Ask each rater to do it alone, on their phone, without searching or asking anyone. It takes about 10 minutes.
 4. Each rater sends back the result code (`RKH1|…`). Save each one as a text file, for example
    `project/reports/human_baseline/raters/NF.txt`.
