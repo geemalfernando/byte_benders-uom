@@ -1,0 +1,379 @@
+{
+  "generated_at": "2026-11-19T13:00:47+00:00",
+  "machine": "Linux x86_64, Python 3.13.18, CPU only",
+  "llm_used": false,
+  "datasets": {
+    "test": {
+      "multi_agent": {
+        "n": 264,
+        "n_scam": 190,
+        "n_legit": 74,
+        "scam_caught": 1.0,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.0,
+        "false_alarm": 0.2027,
+        "legit_cleared": 0.7973,
+        "review_load": 0.0,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 0.8986,
+        "latency_p50_ms": 7.24,
+        "latency_p95_ms": 9.31
+      },
+      "single_agent": {
+        "n": 264,
+        "n_scam": 190,
+        "n_legit": 74,
+        "scam_caught": 0.9368,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.0632,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.7973,
+        "review_load": 0.1023,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 1.71,
+        "latency_p95_ms": 2.29
+      }
+    },
+    "shifted": {
+      "multi_agent": {
+        "n": 152,
+        "n_scam": 132,
+        "n_legit": 20,
+        "scam_caught": 0.9545,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.0455,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.7,
+        "review_load": 0.0789,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 9.34,
+        "latency_p95_ms": 12.61
+      },
+      "single_agent": {
+        "n": 152,
+        "n_scam": 132,
+        "n_legit": 20,
+        "scam_caught": 0.8712,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.1288,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.9,
+        "review_load": 0.125,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 1.77,
+        "latency_p95_ms": 2.62
+      }
+    },
+    "independent": {
+      "multi_agent": {
+        "n": 65,
+        "n_scam": 30,
+        "n_legit": 35,
+        "scam_caught": 0.8,
+        "unsafe_miss": 0.0333,
+        "scam_to_review": 0.1667,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.3714,
+        "review_load": 0.4154,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 0.98,
+        "latency_p50_ms": 10.32,
+        "latency_p95_ms": 12.57
+      },
+      "single_agent": {
+        "n": 65,
+        "n_scam": 30,
+        "n_legit": 35,
+        "scam_caught": 0.8,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.2,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.6286,
+        "review_load": 0.2923,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 1.6,
+        "latency_p95_ms": 2.58
+      }
+    },
+    "stress": {
+      "multi_agent": {
+        "n": 64,
+        "n_scam": 32,
+        "n_legit": 32,
+        "scam_caught": 0.7812,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.2188,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.6562,
+        "review_load": 0.2812,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 13.93,
+        "latency_p95_ms": 16.37
+      },
+      "single_agent": {
+        "n": 64,
+        "n_scam": 32,
+        "n_legit": 32,
+        "scam_caught": 0.125,
+        "unsafe_miss": 0.0312,
+        "scam_to_review": 0.8438,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.5938,
+        "review_load": 0.625,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 0.9,
+        "latency_p50_ms": 1.58,
+        "latency_p95_ms": 1.98
+      }
+    }
+  },
+  "per_language": {
+    "english": {
+      "multi_agent": {
+        "n": 224,
+        "n_scam": 168,
+        "n_legit": 56,
+        "scam_caught": 1.0,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.0,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.9286,
+        "review_load": 0.0179,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 15.21,
+        "latency_p95_ms": 20.3
+      },
+      "single_agent": {
+        "n": 224,
+        "n_scam": 168,
+        "n_legit": 56,
+        "scam_caught": 0.8631,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.1369,
+        "false_alarm": 0.0,
+        "legit_cleared": 1.0,
+        "review_load": 0.1027,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 1.61,
+        "latency_p95_ms": 2.09
+      }
+    },
+    "singlish": {
+      "multi_agent": {
+        "n": 68,
+        "n_scam": 59,
+        "n_legit": 9,
+        "scam_caught": 0.8983,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.1017,
+        "false_alarm": 0.0,
+        "legit_cleared": 1.0,
+        "review_load": 0.0882,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 14.64,
+        "latency_p95_ms": 19.85
+      },
+      "single_agent": {
+        "n": 68,
+        "n_scam": 59,
+        "n_legit": 9,
+        "scam_caught": 1.0,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.0,
+        "false_alarm": 0.0,
+        "legit_cleared": 1.0,
+        "review_load": 0.0,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 1.59,
+        "latency_p95_ms": 1.88
+      }
+    },
+    "sinhala": {
+      "multi_agent": {
+        "n": 97,
+        "n_scam": 65,
+        "n_legit": 32,
+        "scam_caught": 0.9538,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.0462,
+        "false_alarm": 0.4688,
+        "legit_cleared": 0.0938,
+        "review_load": 0.1753,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 0.5833,
+        "latency_p50_ms": 15.68,
+        "latency_p95_ms": 20.37
+      },
+      "single_agent": {
+        "n": 97,
+        "n_scam": 65,
+        "n_legit": 32,
+        "scam_caught": 0.9538,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.0462,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.2812,
+        "review_load": 0.268,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 1.57,
+        "latency_p95_ms": 1.88
+      }
+    },
+    "tamil": {
+      "multi_agent": {
+        "n": 52,
+        "n_scam": 40,
+        "n_legit": 12,
+        "scam_caught": 1.0,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.0,
+        "false_alarm": 0.0,
+        "legit_cleared": 1.0,
+        "review_load": 0.0,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 14.27,
+        "latency_p95_ms": 18.02
+      },
+      "single_agent": {
+        "n": 52,
+        "n_scam": 40,
+        "n_legit": 12,
+        "scam_caught": 0.85,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.15,
+        "false_alarm": 0.0,
+        "legit_cleared": 1.0,
+        "review_load": 0.1154,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 1.59,
+        "latency_p95_ms": 1.96
+      }
+    },
+    "tanglish": {
+      "multi_agent": {
+        "n": 40,
+        "n_scam": 20,
+        "n_legit": 20,
+        "scam_caught": 0.85,
+        "unsafe_miss": 0.05,
+        "scam_to_review": 0.1,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.5,
+        "review_load": 0.3,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 0.9722,
+        "latency_p50_ms": 20.84,
+        "latency_p95_ms": 23.86
+      },
+      "single_agent": {
+        "n": 40,
+        "n_scam": 20,
+        "n_legit": 20,
+        "scam_caught": 0.85,
+        "unsafe_miss": 0.0,
+        "scam_to_review": 0.15,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.65,
+        "review_load": 0.25,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 1.0,
+        "latency_p50_ms": 1.55,
+        "latency_p95_ms": 2.18
+      }
+    }
+  },
+  "robustness": {
+    "failure_rate_0.3": {
+      "multi_agent": {
+        "n": 545,
+        "n_scam": 384,
+        "n_legit": 161,
+        "scam_caught": 0.9349,
+        "unsafe_miss": 0.0026,
+        "scam_to_review": 0.0625,
+        "false_alarm": 0.0994,
+        "legit_cleared": 0.5652,
+        "review_load": 0.1431,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 0.9238,
+        "latency_p50_ms": 9.12,
+        "latency_p95_ms": 14.64
+      },
+      "single_agent": {
+        "n": 545,
+        "n_scam": 384,
+        "n_legit": 161,
+        "scam_caught": 0.7448,
+        "unsafe_miss": 0.0026,
+        "scam_to_review": 0.1458,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.6273,
+        "review_load": 0.1706,
+        "no_answer": 0.1174,
+        "decided_balanced_accuracy": 0.9983,
+        "latency_p50_ms": 1.58,
+        "latency_p95_ms": 2.45
+      }
+    },
+    "failure_rate_0.6": {
+      "multi_agent": {
+        "n": 545,
+        "n_scam": 384,
+        "n_legit": 161,
+        "scam_caught": 0.9062,
+        "unsafe_miss": 0.0026,
+        "scam_to_review": 0.0911,
+        "false_alarm": 0.1739,
+        "legit_cleared": 0.4099,
+        "review_load": 0.1872,
+        "no_answer": 0.0,
+        "decided_balanced_accuracy": 0.8496,
+        "latency_p50_ms": 6.79,
+        "latency_p95_ms": 12.47
+      },
+      "single_agent": {
+        "n": 545,
+        "n_scam": 384,
+        "n_legit": 161,
+        "scam_caught": 0.4948,
+        "unsafe_miss": 0.0026,
+        "scam_to_review": 0.1016,
+        "false_alarm": 0.0,
+        "legit_cleared": 0.441,
+        "review_load": 0.1211,
+        "no_answer": 0.3982,
+        "decided_balanced_accuracy": 0.9974,
+        "latency_p50_ms": 1.56,
+        "latency_p95_ms": 2.34
+      }
+    }
+  },
+  "scalability": {
+    "workers_1": {
+      "multi_agent_msgs_per_s": 46.5,
+      "single_agent_msgs_per_s": 580.2
+    },
+    "workers_4": {
+      "multi_agent_msgs_per_s": 23.4,
+      "single_agent_msgs_per_s": 446.6
+    }
+  },
+  "cost": {
+    "server_usd_per_month": 24.0,
+    "multi_agent_capacity_msgs_per_month": 60652800,
+    "multi_agent_usd_per_1000_msgs_at_full_load": 0.000396,
+    "note": "compute only; WhatsApp reply fees and reviewer time are separate"
+  }
+}
