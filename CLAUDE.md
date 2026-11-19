@@ -7,9 +7,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This repository is Team Byte Benders' (University of Moratuwa) entry to **Innodata AI Catalyst 2026, University Track** ("Multi-Agent AI for Global Problems", domain: Cybersecurity). The entry is **Rakshaka AI as a multi-agent system**: specialist agents on a shared blackboard check scam SMS/WhatsApp messages in English, Sinhala, Singlish, Tamil and Tanglish, and a single-agent baseline is benchmarked against it.
 
 - **New work lives in `project/`** (required entry point `project/main.py`, `project/requirements.txt`, package `project/rakshaka_agents/`). Required docs: `README.md`, `docs/Proposal.docx` (max 10 pages, built by a docx-js script), `docs/Workflow.md`, `docs/PROJECT_DETAILS.md`; `project-demo.mp4` at the repo root (MP4 H.264/AAC, 5–10 min, max 100 MB).
-- **Pre-existing code** (`rakshaka/`, `src/`, `app/`, `scripts/`, Docker) comes from the earlier Rakshaka AI prototype (TensorForge 2.0, Oct 2026). It is reused and must stay disclosed in `docs/PROJECT_DETAILS.md`. Keep new work clearly separate from it.
+- **Pre-existing code** (`rakshaka/`, `src/`, `app/`, `scripts/`, Docker) comes from the earlier Rakshaka AI prototype (Oct 2026). It is reused and must stay disclosed in `docs/PROJECT_DETAILS.md`. Keep new work clearly separate from it.
 - **Competition rules that affect code:** every reported number must come from `python project/main.py benchmark` (never hand-edit `project/reports/`); declare every AI model/tool in `docs/PROJECT_DETAILS.md`; never commit secrets (LLM key only via `ANTHROPIC_API_KEY`); agent interactions must be visible in traces (`project/traces/`).
-- Judges review commit history: make small, frequent commits. Log open items in `docs/Workflow.md`. The old TensorForge workflow log is `docs/LEGACY_workflow.md`.
+- Judges review commit history: make small, frequent commits. Log open items in `docs/Workflow.md`. The earlier prototype's workflow log is `docs/LEGACY_workflow.md`.
 
 ### Multi-agent commands
 

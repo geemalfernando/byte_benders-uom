@@ -1,6 +1,6 @@
 # Workflow Log
 
-This log records what was done to set up, run, improve and test Rakshaka AI on 17 October 2026, during the TensorForge 2.0 build window, working with Claude Code (Claude Opus 5.5). It also notes what was learned along the way. Times are local (UTC+5:30). Sections are in time order. Older sections describe the state at that moment; later sections say when something was superseded.
+This log records what was done to set up, run, improve and test Rakshaka AI on 17 October 2026, during the prototype's build window, working with Claude Code (Claude Opus 5.5). It also notes what was learned along the way. Times are local (UTC+5:30). Sections are in time order. Older sections describe the state at that moment; later sections say when something was superseded.
 
 ## At a glance (state at about 11:20)
 
@@ -42,7 +42,7 @@ This log records what was done to set up, run, improve and test Rakshaka AI on 1
   - `rakshaka/data.py`, `modeling.py` and `service.py`
   - `scripts/prepare_data.py`, `train_model.py`, `monitor_drift.py` and `serve.py`
   - `tests/test_pipeline.py`, the README, the data folders and `artifacts/metrics.json`
-- **Competition rules** (`TensorForge 2.0 Grand Finale.pdf`): a 6-hour build (08:00–14:00) from an empty repository, with the last commit before the deadline judged. The theme is "Scam-Proof by Design": detect scams **and** notice and respond to drift.
+- **Earlier event rules** (the rules brief for that build): a 6-hour build (08:00–14:00) from an empty repository, with the last commit before the deadline judged. The theme is "Scam-Proof by Design": detect scams **and** notice and respond to drift.
   - Required: a running service started from documented commands (a container is preferred), a reproducible pipeline with exact dependency versions, held-out test results in the README, prediction logging plus a drift signal demonstrated on a shifted set, and a drift response.
   - Also required: an architecture diagram, a list of data sources and licences, the AI tools used, a one-page impact statement, a pitch deck as a PDF, and an open licence.
   - Judges weight deployment, monitoring and drift response more heavily than accuracy, and they review commit history.
