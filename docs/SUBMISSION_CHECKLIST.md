@@ -27,7 +27,7 @@ Repository: https://github.com/geemalfernando/byte_benders-uom (private)
 - [x] Repo named `team_name-university` (`byte_benders-uom`)
 - [x] Invited the Innodata GitHub account **AI-Catalyst-Innodata** as a collaborator (19 Nov; pending their acceptance)
 - [ ] Share the repo link with the organisers through the channel given at the 16 Nov introductory session
-- [ ] Confirm the fourth team member's name in `docs/Proposal.docx`
+- [x] Fourth team member (Pamindu Piumaka) added to `docs/Proposal.docx`
 - [ ] Keep the repo updated; organisers must keep access at all times
 
 ## Before 29 Nov

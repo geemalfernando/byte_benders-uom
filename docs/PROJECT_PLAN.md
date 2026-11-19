@@ -1,7 +1,7 @@
 # Complete project plan
 
 Deliverable: architecture, agent design, benchmarking and evaluation plan, milestones and risk analysis.
-Due 29 November 2026, 11:59 PM. Team Byte Benders, University of Moratuwa.
+Due 29 November 2026, 11:59 PM. Team Byte Benders, University of Moratuwa: Geemal Fernando (lead), Thisuka Mahiru, Chanith Wijekoon, Pamindu Piumaka.
 
 ## 1. Architecture
 

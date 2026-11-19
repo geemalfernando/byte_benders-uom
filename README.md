@@ -1,7 +1,7 @@
 # Rakshaka AI: a multi-agent second opinion on scam messages
 
 **Innodata AI Catalyst 2026 · University Track · Domain: Cybersecurity**
-**Team Byte Benders · University of Moratuwa**
+**Team Byte Benders · University of Moratuwa** · Geemal Fernando (lead), Thisuka Mahiru, Chanith Wijekoon, Pamindu Piumaka
 
 Scam SMS and WhatsApp messages reach Sri Lankans every day in Sinhala, Tamil, English and code-mixed
 Singlish and Tanglish. Rakshaka AI lets anyone forward a suspicious message and get a verdict
