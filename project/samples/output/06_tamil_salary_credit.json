@@ -1,0 +1,81 @@
+{
+  "message_id": "d9d6469cc28b",
+  "verdict": "LIKELY_SAFE",
+  "score": 0.0007,
+  "reply": "பெரும்பாலும் பாதுகாப்பானது: மோசடி அறிகுறிகள் இல்லை, ஆனால் கவனமாக இருங்கள்.\nசெய்ய வேண்டியது: சந்தேகம் இருந்தால், நிறுவனத்தின் அதிகாரப்பூர்வ எண்ணை அழைக்கவும்.\nரக்ஷக ஒருபோதும் உங்கள் OTP, PIN அல்லது NIC எண்ணைக் கேட்காது.",
+  "reply_language": "tamil",
+  "language": "tamil",
+  "rules_fired": [],
+  "evidence": [],
+  "human_review": false,
+  "agents": {
+    "intake": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 0.17,
+      "attempts": 1
+    },
+    "language": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "script:tamil"
+      ],
+      "latency_ms": 0.1,
+      "attempts": 1
+    },
+    "link_sender": {
+      "status": "skipped",
+      "risk": null,
+      "evidence": [
+        "no_links_or_numbers"
+      ],
+      "latency_ms": 0.0,
+      "attempts": 1
+    },
+    "content": {
+      "status": "ok",
+      "risk": 0.064,
+      "evidence": [],
+      "latency_ms": 5.03,
+      "attempts": 1
+    },
+    "tactics": {
+      "status": "ok",
+      "risk": 0.0,
+      "evidence": [],
+      "latency_ms": 3.97,
+      "attempts": 1
+    },
+    "campaign": {
+      "status": "ok",
+      "risk": 0.017,
+      "evidence": [],
+      "latency_ms": 4.86,
+      "attempts": 1
+    },
+    "drift": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 4.77,
+      "attempts": 1
+    },
+    "arbiter": {
+      "status": "ok",
+      "risk": 0.001,
+      "evidence": [],
+      "latency_ms": 0.39,
+      "attempts": 1
+    },
+    "explainer": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 0.09,
+      "attempts": 1
+    }
+  },
+  "latency_ms": 6.18
+}

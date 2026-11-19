@@ -1,0 +1,100 @@
+{
+  "message_id": "19e802b5a085",
+  "verdict": "SCAM",
+  "score": 0.85,
+  "reply": "SCAM: this message shows the signs of a scam.\nWhy: the link imitates an official website; it claims to come from a bank or government body.\nWhat to do: do not click the link, call the number or pay. If you already shared card details or an OTP, call your bank on the number printed on your card now.\nRakshaka never asks for your OTP, PIN or NIC.",
+  "reply_language": "english",
+  "language": "english",
+  "rules_fired": [
+    "R2_impersonating_link_or_sender"
+  ],
+  "evidence": [
+    "brand_in_unofficial_domain:udi",
+    "tactic:authority_impersonation",
+    "words:example",
+    "words:details",
+    "words:and"
+  ],
+  "human_review": false,
+  "agents": {
+    "intake": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 0.21,
+      "attempts": 1
+    },
+    "language": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "model:english"
+      ],
+      "latency_ms": 1.16,
+      "attempts": 1
+    },
+    "content": {
+      "status": "ok",
+      "risk": 0.552,
+      "evidence": [
+        "words:example",
+        "words:details",
+        "words:and"
+      ],
+      "latency_ms": 5.68,
+      "attempts": 1
+    },
+    "tactics": {
+      "status": "ok",
+      "risk": 0.09,
+      "evidence": [
+        "tactic:authority_impersonation"
+      ],
+      "latency_ms": 5.15,
+      "attempts": 1
+    },
+    "link_sender": {
+      "status": "ok",
+      "risk": 0.7,
+      "evidence": [
+        "brand_in_unofficial_domain:udi"
+      ],
+      "latency_ms": 4.89,
+      "attempts": 1
+    },
+    "campaign": {
+      "status": "ok",
+      "risk": 0.571,
+      "evidence": [],
+      "latency_ms": 5.06,
+      "attempts": 1
+    },
+    "drift": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 0.86,
+      "attempts": 1
+    },
+    "arbiter": {
+      "status": "ok",
+      "risk": 0.85,
+      "evidence": [
+        "R2_impersonating_link_or_sender"
+      ],
+      "latency_ms": 0.36,
+      "attempts": 1
+    },
+    "explainer": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "reason:lookalike",
+        "reason:authority_impersonation"
+      ],
+      "latency_ms": 0.13,
+      "attempts": 1
+    }
+  },
+  "latency_ms": 8.27
+}

@@ -1,0 +1,1 @@
+SL-UDI notice: your new digital ID is not activated. Scan the QR at udi-activate.example and enter your details.

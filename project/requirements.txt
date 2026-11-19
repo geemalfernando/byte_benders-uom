@@ -1,0 +1,6 @@
+# Rakshaka AI multi-agent layer (project/). Python 3.12+. CPU only, no GPU, no paid API needed.
+scikit-learn==1.9.1
+numpy==2.5.3
+scipy>=1.14
+joblib==1.6.0
+requests==2.34.2      # only for the optional LLM rephraser (ANTHROPIC_API_KEY)

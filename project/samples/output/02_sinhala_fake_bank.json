@@ -1,0 +1,104 @@
+{
+  "message_id": "348d6fb57426",
+  "verdict": "SCAM",
+  "score": 0.8798,
+  "reply": "වංචාවක්: මෙම පණිවිඩයේ වංචාවක ලකුණු ඇත.\nහේතුව: සබැඳිය නිල වෙබ් අඩවියක් අනුකරණය කරයි; එය ඉක්මන් කරන්න බල කරයි හෝ අවහිර කරන බව තර්ජනය කරයි; වෙබ් ලිපිනය වංචාකරුවන් බොහෝ විට භාවිත කරන වර්ගයකි.\nකළ යුත්තේ: සබැඳිය ඔබන්න, අංකයට අමතන්න හෝ මුදල් ගෙවන්න එපා. කාඩ්පත් විස්තර හෝ OTP දැනටමත් දුන්නා නම්, කාඩ්පතේ ඇති අංකයෙන් වහාම බැංකුවට අමතන්න.\nරක්ෂක කිසිවිටෙක ඔබගේ OTP, PIN හෝ හැඳුනුම්පත් අංකය ඉල්ලන්නේ නැත.",
+  "reply_language": "sinhala",
+  "language": "sinhala",
+  "rules_fired": [
+    "R2_impersonating_link_or_sender"
+  ],
+  "evidence": [
+    "risky_tld:.top",
+    "brand_in_unofficial_domain:boc+verify",
+    "tactic:threat_or_urgency",
+    "words:verify",
+    "words:ව ඇත",
+    "matches_campaign:scam-10"
+  ],
+  "human_review": false,
+  "agents": {
+    "intake": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 0.22,
+      "attempts": 1
+    },
+    "language": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "script:sinhala"
+      ],
+      "latency_ms": 0.1,
+      "attempts": 1
+    },
+    "content": {
+      "status": "ok",
+      "risk": 0.7,
+      "evidence": [
+        "words:verify",
+        "words:ව ඇත"
+      ],
+      "latency_ms": 4.07,
+      "attempts": 1
+    },
+    "tactics": {
+      "status": "ok",
+      "risk": 0.15,
+      "evidence": [
+        "tactic:threat_or_urgency"
+      ],
+      "latency_ms": 3.86,
+      "attempts": 1
+    },
+    "link_sender": {
+      "status": "ok",
+      "risk": 0.925,
+      "evidence": [
+        "risky_tld:.top",
+        "brand_in_unofficial_domain:boc+verify"
+      ],
+      "latency_ms": 3.63,
+      "attempts": 1
+    },
+    "campaign": {
+      "status": "ok",
+      "risk": 0.753,
+      "evidence": [
+        "matches_campaign:scam-10"
+      ],
+      "latency_ms": 6.04,
+      "attempts": 1
+    },
+    "drift": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 6.1,
+      "attempts": 1
+    },
+    "arbiter": {
+      "status": "ok",
+      "risk": 0.88,
+      "evidence": [
+        "R2_impersonating_link_or_sender"
+      ],
+      "latency_ms": 0.41,
+      "attempts": 1
+    },
+    "explainer": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "reason:lookalike",
+        "reason:threat_or_urgency",
+        "reason:risky_tld"
+      ],
+      "latency_ms": 0.09,
+      "attempts": 1
+    }
+  },
+  "latency_ms": 7.5
+}

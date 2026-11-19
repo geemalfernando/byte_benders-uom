@@ -1,0 +1,98 @@
+{
+  "message_id": "d825e534247c",
+  "verdict": "UNCERTAIN",
+  "score": 0.0547,
+  "reply": "NOT SURE: we could not confirm this message is safe. Treat it as suspicious.\nWhy: its wording is new to us; the only link goes to an official website.\nWhat to do: do not click or pay yet. Check with the organisation using its official number. Our team will review this message.\nRakshaka never asks for your OTP, PIN or NIC.",
+  "reply_language": "english",
+  "language": "english",
+  "rules_fired": [
+    "R5_novel_wording"
+  ],
+  "evidence": [
+    "official_domain:ceb.lk",
+    "official_sender:CEB",
+    "words:power",
+    "novel_wording"
+  ],
+  "human_review": true,
+  "agents": {
+    "intake": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 0.17,
+      "attempts": 1
+    },
+    "language": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "model:english"
+      ],
+      "latency_ms": 1.12,
+      "attempts": 1
+    },
+    "content": {
+      "status": "ok",
+      "risk": 0.386,
+      "evidence": [
+        "words:power"
+      ],
+      "latency_ms": 5.4,
+      "attempts": 1
+    },
+    "tactics": {
+      "status": "ok",
+      "risk": 0.0,
+      "evidence": [],
+      "latency_ms": 4.05,
+      "attempts": 1
+    },
+    "link_sender": {
+      "status": "ok",
+      "risk": 0.05,
+      "evidence": [
+        "official_domain:ceb.lk",
+        "official_sender:CEB"
+      ],
+      "latency_ms": 2.12,
+      "attempts": 1
+    },
+    "campaign": {
+      "status": "ok",
+      "risk": 0.499,
+      "evidence": [],
+      "latency_ms": 4.11,
+      "attempts": 1
+    },
+    "drift": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "novel_wording"
+      ],
+      "latency_ms": 2.42,
+      "attempts": 1
+    },
+    "arbiter": {
+      "status": "ok",
+      "risk": 0.055,
+      "evidence": [
+        "R5_novel_wording"
+      ],
+      "latency_ms": 0.37,
+      "attempts": 1
+    },
+    "explainer": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "reason:novel",
+        "reason:official"
+      ],
+      "latency_ms": 0.14,
+      "attempts": 1
+    }
+  },
+  "latency_ms": 7.76
+}

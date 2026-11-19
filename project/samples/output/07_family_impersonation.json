@@ -1,0 +1,99 @@
+{
+  "message_id": "c3456fad645d",
+  "verdict": "UNCERTAIN",
+  "score": 0.6916,
+  "reply": "NOT SURE: we could not confirm this message is safe. Treat it as suspicious.\nWhy: it asks you to pay a fee or send money; it pressures you to act fast or threatens a block; its wording is new to us.\nWhat to do: do not click or pay yet. Check with the organisation using its official number. Our team will review this message.\nRakshaka never asks for your OTP, PIN or NIC.",
+  "reply_language": "english",
+  "language": "english",
+  "rules_fired": [],
+  "evidence": [
+    "tactic:payment_request",
+    "tactic:threat_or_urgency",
+    "words:this is",
+    "words:number",
+    "novel_wording"
+  ],
+  "human_review": true,
+  "agents": {
+    "intake": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 0.19,
+      "attempts": 1
+    },
+    "language": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "model:english"
+      ],
+      "latency_ms": 1.11,
+      "attempts": 1
+    },
+    "content": {
+      "status": "ok",
+      "risk": 0.43,
+      "evidence": [
+        "words:this is",
+        "words:number"
+      ],
+      "latency_ms": 5.43,
+      "attempts": 1
+    },
+    "tactics": {
+      "status": "ok",
+      "risk": 0.512,
+      "evidence": [
+        "tactic:payment_request",
+        "tactic:threat_or_urgency"
+      ],
+      "latency_ms": 5.09,
+      "attempts": 1
+    },
+    "link_sender": {
+      "status": "skipped",
+      "risk": null,
+      "evidence": [
+        "no_links_or_numbers"
+      ],
+      "latency_ms": 4.47,
+      "attempts": 1
+    },
+    "campaign": {
+      "status": "ok",
+      "risk": 0.331,
+      "evidence": [],
+      "latency_ms": 4.45,
+      "attempts": 1
+    },
+    "drift": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "novel_wording"
+      ],
+      "latency_ms": 5.08,
+      "attempts": 1
+    },
+    "arbiter": {
+      "status": "ok",
+      "risk": 0.692,
+      "evidence": [],
+      "latency_ms": 0.35,
+      "attempts": 1
+    },
+    "explainer": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "reason:payment_request",
+        "reason:threat_or_urgency",
+        "reason:novel"
+      ],
+      "latency_ms": 0.12,
+      "attempts": 1
+    }
+  },
+  "latency_ms": 7.82
+}

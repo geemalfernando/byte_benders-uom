@@ -1,0 +1,90 @@
+{
+  "message_id": "7ed5e11e874f",
+  "verdict": "LIKELY_SAFE",
+  "score": 0.001,
+  "reply": "LIKELY SAFE: we found no scam signs, but stay careful.\nWhy: it contains the safety advice real institutions give.\nWhat to do: if anything still looks odd, call the organisation on its official number.\nRakshaka never asks for your OTP, PIN or NIC.",
+  "reply_language": "english",
+  "language": "english",
+  "rules_fired": [],
+  "evidence": [
+    "safety_advice",
+    "words:will"
+  ],
+  "human_review": false,
+  "agents": {
+    "intake": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 0.18,
+      "attempts": 1
+    },
+    "language": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "model:english"
+      ],
+      "latency_ms": 1.14,
+      "attempts": 1
+    },
+    "content": {
+      "status": "ok",
+      "risk": 0.102,
+      "evidence": [
+        "words:will"
+      ],
+      "latency_ms": 5.12,
+      "attempts": 1
+    },
+    "tactics": {
+      "status": "ok",
+      "risk": 0.0,
+      "evidence": [
+        "safety_advice"
+      ],
+      "latency_ms": 3.32,
+      "attempts": 1
+    },
+    "link_sender": {
+      "status": "skipped",
+      "risk": null,
+      "evidence": [
+        "no_links_or_numbers"
+      ],
+      "latency_ms": 0.49,
+      "attempts": 1
+    },
+    "campaign": {
+      "status": "ok",
+      "risk": 0.074,
+      "evidence": [],
+      "latency_ms": 4.55,
+      "attempts": 1
+    },
+    "drift": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 3.19,
+      "attempts": 1
+    },
+    "arbiter": {
+      "status": "ok",
+      "risk": 0.001,
+      "evidence": [],
+      "latency_ms": 0.4,
+      "attempts": 1
+    },
+    "explainer": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "reason:safety_advice"
+      ],
+      "latency_ms": 0.11,
+      "attempts": 1
+    }
+  },
+  "latency_ms": 7.35
+}

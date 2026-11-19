@@ -1,0 +1,94 @@
+{
+  "message_id": "79750356eea0",
+  "verdict": "SCAM",
+  "score": 0.7968,
+  "reply": "වංචාවක්: මෙම පණිවිඩයේ වංචාවක ලකුණු ඇත.\nහේතුව: එය කේතයක්, PIN අංකයක් හෝ පුද්ගලික විස්තර ඉල්ලයි.\nකළ යුත්තේ: සබැඳිය ඔබන්න, අංකයට අමතන්න හෝ මුදල් ගෙවන්න එපා. කාඩ්පත් විස්තර හෝ OTP දැනටමත් දුන්නා නම්, කාඩ්පතේ ඇති අංකයෙන් වහාම බැංකුවට අමතන්න.\nරක්ෂක කිසිවිටෙක ඔබගේ OTP, PIN හෝ හැඳුනුම්පත් අංකය ඉල්ලන්නේ නැත.",
+  "reply_language": "sinhala",
+  "language": "singlish",
+  "rules_fired": [],
+  "evidence": [
+    "tactic:credential_request",
+    "words:account eka",
+    "words:mata",
+    "words:oyata"
+  ],
+  "human_review": false,
+  "agents": {
+    "intake": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 0.19,
+      "attempts": 1
+    },
+    "language": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "model:singlish"
+      ],
+      "latency_ms": 1.02,
+      "attempts": 1
+    },
+    "link_sender": {
+      "status": "skipped",
+      "risk": null,
+      "evidence": [
+        "no_links_or_numbers"
+      ],
+      "latency_ms": 0.0,
+      "attempts": 1
+    },
+    "content": {
+      "status": "ok",
+      "risk": 0.358,
+      "evidence": [
+        "words:account eka",
+        "words:mata",
+        "words:oyata"
+      ],
+      "latency_ms": 5.07,
+      "attempts": 1
+    },
+    "tactics": {
+      "status": "ok",
+      "risk": 0.45,
+      "evidence": [
+        "tactic:credential_request"
+      ],
+      "latency_ms": 0.42,
+      "attempts": 1
+    },
+    "campaign": {
+      "status": "ok",
+      "risk": 0.642,
+      "evidence": [],
+      "latency_ms": 2.03,
+      "attempts": 1
+    },
+    "drift": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [],
+      "latency_ms": 0.41,
+      "attempts": 1
+    },
+    "arbiter": {
+      "status": "ok",
+      "risk": 0.797,
+      "evidence": [],
+      "latency_ms": 0.35,
+      "attempts": 1
+    },
+    "explainer": {
+      "status": "ok",
+      "risk": null,
+      "evidence": [
+        "reason:credential_request"
+      ],
+      "latency_ms": 0.12,
+      "attempts": 1
+    }
+  },
+  "latency_ms": 7.21
+}
