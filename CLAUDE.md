@@ -4,9 +4,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Context
 
-Rakshaka AI is a TensorForge 2.0 hackathon entry, theme "Scam-Proof by Design". It flags scam SMS and WhatsApp messages for Sri Lankan users in English, Sinhala, Singlish, Tamil and Tanglish, and it detects and responds to drift when new scam tactics appear (for example fake SL-UDI digital ID scams). Judges weight deployment, monitoring and drift response more heavily than raw accuracy, and they review commit history, so make small, frequent commits. The competition rules are in `TensorForge 2.0 Grand Finale.pdf`, which is gitignored. `workflow.md` logs the setup steps, measured results and open items. Add new work to it.
+This repository is Team Byte Benders' (University of Moratuwa) entry to **Innodata AI Catalyst 2026, University Track** ("Multi-Agent AI for Global Problems", domain: Cybersecurity). The entry is **Rakshaka AI as a multi-agent system**: specialist agents on a shared blackboard check scam SMS/WhatsApp messages in English, Sinhala, Singlish, Tamil and Tanglish, and a single-agent baseline is benchmarked against it.
 
-## Commands
+- **New work lives in `project/`** (required entry point `project/main.py`, `project/requirements.txt`, package `project/rakshaka_agents/`). Required docs: `README.md`, `docs/Proposal.docx` (max 10 pages, built by a docx-js script), `docs/Workflow.md`, `docs/PROJECT_DETAILS.md`; `project-demo.mp4` at the repo root (MP4 H.264/AAC, 5–10 min, max 100 MB).
+- **Pre-existing code** (`rakshaka/`, `src/`, `app/`, `scripts/`, Docker) comes from the earlier Rakshaka AI prototype (Geveo Ignite / TensorForge 2.0, Oct 2026). It is reused and must stay disclosed in `docs/PROJECT_DETAILS.md`. Keep new work clearly separate from it.
+- **Competition rules that affect code:** every reported number must come from `python project/main.py benchmark` (never hand-edit `project/reports/`); declare every AI model/tool in `docs/PROJECT_DETAILS.md`; never commit secrets (LLM key only via `ANTHROPIC_API_KEY`); agent interactions must be visible in traces (`project/traces/`).
+- Judges review commit history: make small, frequent commits. Log open items in `docs/Workflow.md`. The old TensorForge workflow log is `docs/LEGACY_workflow.md`.
+
+### Multi-agent commands
+
+```bash
+python project/main.py train | check "<text>" [--sender ID] | demo | benchmark
+python project/main.py review | label ID scam|legitimate | retrain | rollback
+python project/main.py human-sheet | human-score FILE | serve --port 8080
+python -m unittest tests.test_agents
+```
+
+Agents: intake (privacy, only one that sees raw text) → language → orchestrator plan → content, tactics, link_sender (only if links/numbers/sender), campaign, drift in parallel → arbiter (stacker on out-of-fold outputs + rules R1–R8) → explainer (validated reply). The Link agent is deliberately not a stacker input (synthetic legit data has almost no links). UNCERTAIN → `project/runtime/review_queue.jsonl` (redacted). Labels → `runtime/reviewed.csv` + `runtime/blocklist.txt`; `retrain` promotes only if `rakshaka.modeling.retrain_gate` passes.
+
+## Legacy prototype (pre-existing)
+
+### Commands
 
 Use the project venv: `.venv/bin/python`. The system `python3` is pyenv 3.8 and won't work. Docker and CI use Python 3.12. Keep `requirements.txt` exactly pinned. A `model.joblib` pickled with one scikit-learn version may not load under another.
 
@@ -26,7 +44,7 @@ python -m unittest tests.test_src_pipeline.TemplateSplitTests.test_no_template_a
 
 There is no linter. CI runs `compileall`, the unit tests, the full make_data → train → evaluate pipeline and `docker build`. The Docker image generates the data and trains the model at build time.
 
-## Architecture
+### Architecture (legacy)
 
 There are two pipelines that share the `rakshaka/` library.
 
