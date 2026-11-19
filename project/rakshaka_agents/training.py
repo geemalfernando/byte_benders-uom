@@ -47,7 +47,9 @@ def load_rows(path: Path) -> list[dict]:
 
 def ensure_data() -> None:
     if not (DATA / "train.csv").exists():
-        subprocess.run([sys.executable, str(ROOT / "src" / "make_data.py")], check=True, cwd=ROOT)
+        # progress lines go to stderr so `check --json` stays valid JSON on the first run
+        subprocess.run([sys.executable, str(ROOT / "src" / "make_data.py")], check=True, cwd=ROOT,
+                       stdout=sys.stderr)
 
 
 def fit_language(rows):
