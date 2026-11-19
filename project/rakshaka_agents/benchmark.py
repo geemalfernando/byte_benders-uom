@@ -33,7 +33,7 @@ DATASETS = {
     "independent": DATA / "extra_test.csv",
     "stress": PROJECT / "data" / "adversarial.csv",
 }
-SERVER_USD_PER_MONTH = 24.0   # 2 vCPU / 4 GB droplet, as in the Geveo proposal
+SERVER_USD_PER_MONTH = 24.0   # 2 vCPU / 4 GB droplet, as in the earlier prototype's costing
 
 
 def score(rows, results) -> dict:

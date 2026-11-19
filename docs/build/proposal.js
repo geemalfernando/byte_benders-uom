@@ -219,7 +219,7 @@ const body = [
     'Department of Census and Statistics: Census of Population and Housing 2024; Computer Literacy 2024. Department of Pensions statistics (Feb 2025). DataReportal Digital 2026: Sri Lanka.',
     '2026 scam warnings from SLCERT, Sri Lanka Post, DRP, Police and the Welfare Benefits Board (Newswire, Newsfirst, Ada Derana); Daily Mirror (24 Nov 2025).',
     'ScamShield (scamshield.org.sg) and Open Government Products metrics.',
-    'Byte Benders, Rakshaka AI prototype (Geveo Ignite 2026), github.com/geemalfernando/Rakshaka_AI (reused components, disclosed).',
+    'Byte Benders, Rakshaka AI prototype (Oct 2026), github.com/geemalfernando/Rakshaka_AI (reused components, disclosed).',
   ].map(t => new Paragraph({ numbering: { reference: 'n', level: 0 }, spacing: { after: 40 }, children: [r(t, { size: 17 })] })),
 ];
 
