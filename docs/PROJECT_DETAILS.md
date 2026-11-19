@@ -18,7 +18,7 @@
 | Parallel specialists with 2 s timeout, retry, failure fallbacks, degraded mode | Built |
 | Redaction of NIC, card numbers and emails before analysis; hash-only identity | Built |
 | Replies in English, Sinhala and Tamil; validator for every reply | Built (Sinhala/Tamil drafts need native review) |
-| Optional LLM rewording of replies, validated | Built, not used in benchmarks |
+| Optional LLM rewording of replies, validated | Code written, **not yet executed against the live API** (no key in the build environment); not used in benchmarks. The template path is what runs. |
 | JSONL traces of every agent post and decision | Built |
 | Human review queue (redacted), labels, audit log | Built (`review`, `label`); review UI in progress |
 | Single-agent baseline and benchmark harness, failure injection, throughput | Built |
