@@ -1,0 +1,17 @@
+digraph G {
+ rankdir=TB; bgcolor="white"; nodesep=0.15; ranksep=0.3;
+ node [shape=box style="rounded,filled" fontname="Liberation Sans" fontsize=10 color="#1c5cab" fillcolor="#eaf2fc" penwidth=1.2];
+ edge [color="#555555" arrowsize=0.6 fontname="Liberation Sans" fontsize=8];
+ IN [label="Message\n+ sender ID" fillcolor="#ffffff" color="#888888"];
+ I [label="Intake & Privacy\nredact NIC / card\nextract links, numbers"];
+ L [label="Language\nscript rules +\nchar n-gram model"];
+ P [label="Orchestrator\nplan, parallel run,\ntimeouts, retries" fillcolor="#1c5cab" fontcolor="white"];
+ subgraph cluster_s { label="Specialists (parallel) → shared blackboard"; fontname="Liberation Sans"; fontsize=9; color="#bbbbbb"; style="rounded,dashed"; labelloc=b; labeljust=r;
+  C [label="Content\nTF-IDF + LR"]; T [label="Tactics\nsocial-engineering cues"]; K [label="Link & Sender\nlook-alikes, shorteners"]; G [label="Campaign\nknown + emerging waves"]; D [label="Drift sentinel\nnovel wording"]; }
+ A [label="Arbiter\nstacker + rules R1–R8" fillcolor="#1c5cab" fontcolor="white"];
+ E [label="Explainer\nSi / Ta / En reply\n+ validator"];
+ H [label="Human review\nqueue → labels →\ngated retraining" fillcolor="#fdeee6" color="#d95926"];
+ O [label="Verdict + reason\n+ next step" fillcolor="#ffffff" color="#888888"];
+ {rank=same; IN; I; L; P;} IN->I->L->P; P->C; P->T; P->K [label="only if links /\nnumbers / sender"]; P->G; P->D;
+ C->A; T->A; K->A; G->A; D->A; {rank=same; H; A; E; O;} H->A [style=invis]; A->E->O; A->H [label="UNCERTAIN" constraint=false];
+}
