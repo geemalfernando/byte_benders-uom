@@ -150,6 +150,14 @@ def to_markdown(r: dict) -> str:
     out += ["", "## Throughput", ""]
     for k, v in r["scalability"].items():
         out.append(f"- {k}: multi-agent {v['multi_agent_msgs_per_s']} msg/s, single-agent {v['single_agent_msgs_per_s']} msg/s")
+    out += ["", "## Test conditions and limitations", "",
+            f"- Machine: {r['machine']}. Same messages, same training data, same content model and thresholds for both systems.",
+            "- Sample sizes are the `n` column above. All data is synthetic or hand-written; these results show the design works, "
+            "not accuracy on real traffic.",
+            "- The stress set was written while the link rules were designed, so it is not an unbiased estimate.",
+            "- Failure injection: each agent attempt fails with the stated probability; 2 attempts per agent (and per single-agent call).",
+            "- Human baseline: not yet collected (see `python project/main.py human-sheet`).",
+            "- The LLM rephraser was off for every run (`llm_used: false`)."]
     c = r["cost"]
     out += ["", f"Compute cost at full load on a USD {c['server_usd_per_month']}/month server: "
                 f"USD {c['multi_agent_usd_per_1000_msgs_at_full_load']} per 1,000 messages ({c['note']})."]

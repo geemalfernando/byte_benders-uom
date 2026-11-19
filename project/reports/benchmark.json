@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T13:32:48+00:00",
+  "generated_at": "2026-11-19T14:00:05+00:00",
   "machine": "Linux x86_64, Python 3.13.18, CPU only",
   "llm_used": false,
   "datasets": {
@@ -16,8 +16,8 @@
         "review_load": 0.0568,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 9.2,
-        "latency_p95_ms": 12.02
+        "latency_p50_ms": 8.71,
+        "latency_p95_ms": 11.39
       },
       "single_agent": {
         "n": 264,
@@ -31,8 +31,8 @@
         "review_load": 0.1023,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 1.63,
-        "latency_p95_ms": 2.52
+        "latency_p50_ms": 1.55,
+        "latency_p95_ms": 1.91
       }
     },
     "shifted": {
@@ -48,8 +48,8 @@
         "review_load": 0.0789,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 11.86,
-        "latency_p95_ms": 14.01
+        "latency_p50_ms": 9.78,
+        "latency_p95_ms": 12.54
       },
       "single_agent": {
         "n": 152,
@@ -63,8 +63,8 @@
         "review_load": 0.125,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 2.26,
-        "latency_p95_ms": 2.59
+        "latency_p50_ms": 1.54,
+        "latency_p95_ms": 1.95
       }
     },
     "independent": {
@@ -80,8 +80,8 @@
         "review_load": 0.4154,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 0.98,
-        "latency_p50_ms": 14.46,
-        "latency_p95_ms": 16.6
+        "latency_p50_ms": 11.65,
+        "latency_p95_ms": 14.14
       },
       "single_agent": {
         "n": 65,
@@ -95,8 +95,8 @@
         "review_load": 0.2923,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 1.59,
-        "latency_p95_ms": 2.01
+        "latency_p50_ms": 1.62,
+        "latency_p95_ms": 2.27
       }
     },
     "stress": {
@@ -112,8 +112,8 @@
         "review_load": 0.2812,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 13.95,
-        "latency_p95_ms": 17.5
+        "latency_p50_ms": 13.59,
+        "latency_p95_ms": 15.89
       },
       "single_agent": {
         "n": 64,
@@ -127,8 +127,8 @@
         "review_load": 0.625,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 0.9,
-        "latency_p50_ms": 1.52,
-        "latency_p95_ms": 1.73
+        "latency_p50_ms": 1.62,
+        "latency_p95_ms": 3.08
       }
     }
   },
@@ -146,8 +146,8 @@
         "review_load": 0.0179,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 18.96,
-        "latency_p95_ms": 25.67
+        "latency_p50_ms": 16.76,
+        "latency_p95_ms": 22.3
       },
       "single_agent": {
         "n": 224,
@@ -161,8 +161,8 @@
         "review_load": 0.1027,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 1.55,
-        "latency_p95_ms": 1.72
+        "latency_p50_ms": 1.59,
+        "latency_p95_ms": 2.21
       }
     },
     "singlish": {
@@ -178,8 +178,8 @@
         "review_load": 0.0882,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 18.89,
-        "latency_p95_ms": 24.91
+        "latency_p50_ms": 16.66,
+        "latency_p95_ms": 22.12
       },
       "single_agent": {
         "n": 68,
@@ -193,8 +193,8 @@
         "review_load": 0.0,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 1.53,
-        "latency_p95_ms": 1.7
+        "latency_p50_ms": 1.58,
+        "latency_p95_ms": 1.88
       }
     },
     "sinhala": {
@@ -210,8 +210,8 @@
         "review_load": 0.3299,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 18.77,
-        "latency_p95_ms": 23.79
+        "latency_p50_ms": 16.41,
+        "latency_p95_ms": 23.14
       },
       "single_agent": {
         "n": 97,
@@ -225,8 +225,8 @@
         "review_load": 0.268,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 1.52,
-        "latency_p95_ms": 1.73
+        "latency_p50_ms": 1.58,
+        "latency_p95_ms": 2.35
       }
     },
     "tamil": {
@@ -242,8 +242,8 @@
         "review_load": 0.0,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 17.23,
-        "latency_p95_ms": 23.45
+        "latency_p50_ms": 15.41,
+        "latency_p95_ms": 20.23
       },
       "single_agent": {
         "n": 52,
@@ -257,8 +257,8 @@
         "review_load": 0.1154,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 1.58,
-        "latency_p95_ms": 1.76
+        "latency_p50_ms": 1.56,
+        "latency_p95_ms": 2.03
       }
     },
     "tanglish": {
@@ -275,7 +275,7 @@
         "no_answer": 0.0,
         "decided_balanced_accuracy": 0.9722,
         "latency_p50_ms": 19.84,
-        "latency_p95_ms": 25.66
+        "latency_p95_ms": 24.88
       },
       "single_agent": {
         "n": 40,
@@ -289,8 +289,8 @@
         "review_load": 0.25,
         "no_answer": 0.0,
         "decided_balanced_accuracy": 1.0,
-        "latency_p50_ms": 1.47,
-        "latency_p95_ms": 1.57
+        "latency_p50_ms": 1.54,
+        "latency_p95_ms": 1.7
       }
     }
   },
@@ -300,16 +300,16 @@
         "n": 545,
         "n_scam": 384,
         "n_legit": 161,
-        "scam_caught": 0.7995,
-        "unsafe_miss": 0.0026,
-        "scam_to_review": 0.1979,
+        "scam_caught": 0.8151,
+        "unsafe_miss": 0.0052,
+        "scam_to_review": 0.1797,
         "false_alarm": 0.0,
-        "legit_cleared": 0.4845,
-        "review_load": 0.2917,
+        "legit_cleared": 0.6087,
+        "review_load": 0.2422,
         "no_answer": 0.0,
-        "decided_balanced_accuracy": 0.9984,
-        "latency_p50_ms": 14.48,
-        "latency_p95_ms": 24.85
+        "decided_balanced_accuracy": 0.9968,
+        "latency_p50_ms": 11.58,
+        "latency_p95_ms": 20.43
       },
       "single_agent": {
         "n": 545,
@@ -323,8 +323,8 @@
         "review_load": 0.1706,
         "no_answer": 0.1174,
         "decided_balanced_accuracy": 0.9983,
-        "latency_p50_ms": 1.62,
-        "latency_p95_ms": 2.46
+        "latency_p50_ms": 1.57,
+        "latency_p95_ms": 2.14
       }
     },
     "failure_rate_0.6": {
@@ -332,16 +332,16 @@
         "n": 545,
         "n_scam": 384,
         "n_legit": 161,
-        "scam_caught": 0.513,
-        "unsafe_miss": 0.0052,
-        "scam_to_review": 0.4818,
+        "scam_caught": 0.4818,
+        "unsafe_miss": 0.0078,
+        "scam_to_review": 0.5104,
         "false_alarm": 0.0,
-        "legit_cleared": 0.4037,
-        "review_load": 0.5156,
+        "legit_cleared": 0.3416,
+        "review_load": 0.5541,
         "no_answer": 0.0,
-        "decided_balanced_accuracy": 0.995,
-        "latency_p50_ms": 10.01,
-        "latency_p95_ms": 24.29
+        "decided_balanced_accuracy": 0.992,
+        "latency_p50_ms": 11.15,
+        "latency_p95_ms": 25.78
       },
       "single_agent": {
         "n": 545,
@@ -356,24 +356,24 @@
         "no_answer": 0.3982,
         "decided_balanced_accuracy": 0.9974,
         "latency_p50_ms": 1.48,
-        "latency_p95_ms": 2.38
+        "latency_p95_ms": 2.15
       }
     }
   },
   "scalability": {
     "workers_1": {
-      "multi_agent_msgs_per_s": 40.8,
-      "single_agent_msgs_per_s": 492.9
+      "multi_agent_msgs_per_s": 41.9,
+      "single_agent_msgs_per_s": 564.0
     },
     "workers_4": {
-      "multi_agent_msgs_per_s": 20.7,
-      "single_agent_msgs_per_s": 459.6
+      "multi_agent_msgs_per_s": 21.0,
+      "single_agent_msgs_per_s": 484.1
     }
   },
   "cost": {
     "server_usd_per_month": 24.0,
-    "multi_agent_capacity_msgs_per_month": 53654400,
-    "multi_agent_usd_per_1000_msgs_at_full_load": 0.000447,
+    "multi_agent_capacity_msgs_per_month": 54432000,
+    "multi_agent_usd_per_1000_msgs_at_full_load": 0.000441,
     "note": "compute only; WhatsApp reply fees and reviewer time are separate"
   }
 }
