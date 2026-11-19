@@ -5,7 +5,38 @@ on:
   pull_request:
 
 jobs:
-  tests:
+  multi-agent:
+    name: Multi-agent system (AI Catalyst)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r project/requirements.txt
+      - name: Compile
+        run: python -m compileall -q project tests/test_agents.py
+      - name: Train agents
+        run: python project/main.py train
+      - name: Agent tests
+        run: python -m unittest tests.test_agents -v
+      - name: Sample run
+        run: python project/main.py demo
+      - name: Benchmark (multi-agent vs single-agent)
+        run: python project/main.py benchmark
+      - name: Upload benchmark and traces
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark
+          path: |
+            project/reports/benchmark.json
+            project/reports/benchmark.md
+            project/traces/benchmark_traces.jsonl
+
+  legacy:
+    name: Pre-existing single-model prototype
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
