@@ -72,5 +72,16 @@ class OrchestratorTests(unittest.TestCase):
         self.assertEqual(result["agents"]["content"]["status"], "error")
 
 
+class RateLimitTests(unittest.TestCase):
+    def test_limiter_blocks_after_quota(self):
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "project"))
+        from main import RateLimiter
+        limiter = RateLimiter(2)
+        self.assertTrue(limiter.allow("a"))
+        self.assertTrue(limiter.allow("a"))
+        self.assertFalse(limiter.allow("a"))
+        self.assertTrue(limiter.allow("b"))
+
+
 if __name__ == "__main__":
     unittest.main()

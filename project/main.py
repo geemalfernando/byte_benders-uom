@@ -19,7 +19,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
+import threading
+import time
+from collections import defaultdict, deque
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
@@ -62,8 +66,32 @@ def cmd_demo() -> None:
         print(f"{path.name:<32} {result['verdict']:<12} {', '.join(result['rules_fired'])}")
 
 
+CHECKS_PER_MINUTE = int(os.environ.get("CHECKS_PER_MINUTE", "60"))
+
+
+class RateLimiter:
+    """Sliding one-minute window per client address, so one caller cannot flood the agents."""
+
+    def __init__(self, per_minute: int):
+        self.per_minute = per_minute
+        self.hits: dict[str, deque] = defaultdict(deque)
+        self.lock = threading.Lock()
+
+    def allow(self, client: str) -> bool:
+        now = time.monotonic()
+        with self.lock:
+            window = self.hits[client]
+            while window and now - window[0] > 60:
+                window.popleft()
+            if len(window) >= self.per_minute:
+                return False
+            window.append(now)
+            return True
+
+
 class Handler(BaseHTTPRequestHandler):
     orchestrator: Orchestrator = None
+    limiter = RateLimiter(CHECKS_PER_MINUTE)
 
     def _send(self, status: int, body: dict) -> None:
         data = json.dumps(body, ensure_ascii=False).encode("utf-8")
@@ -79,6 +107,8 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):  # noqa: N802
         if self.path != "/check":
             return self._send(404, {"error": "not found"})
+        if not self.limiter.allow(self.client_address[0]):
+            return self._send(429, {"error": f"rate limit: {CHECKS_PER_MINUTE} checks per minute"})
         try:
             length = int(self.headers.get("Content-Length", 0))
             if not 0 < length <= 8192:
