@@ -41,6 +41,7 @@ const body = [
     ['Item', 'Details'],
     ['Team', 'Byte Benders, University of Moratuwa (BSc (Hons) in Information Technology)'],
     ['Members', 'Geemal Fernando (team leader) · Thisuka Mahiru · Chanith Wijekoon · Pamindu Piumaka'],
+    ['Registration ref.', 'AIC26-DADFC32AB79D (University Track)'],
     ['Domain', 'Cybersecurity: consumer fraud and social-engineering defence'],
     ['Repository', 'https://github.com/geemalfernando/byte_benders-uom'],
     ['Status (19 Nov 2026)', 'Working multi-agent pipeline, single-agent baseline and benchmark harness in the repository; Phase 1 MVP due 29 Nov'],
