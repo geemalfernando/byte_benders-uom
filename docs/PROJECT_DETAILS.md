@@ -72,7 +72,7 @@
 
 | Component | Origin | How it is used |
 |---|---|---|
-| `rakshaka/modeling.py` (`make_classifier`, `preprocess_text`, `char_ngram_oov_ratio`, `retrain_gate`) | Rakshaka AI, Geveo Ignite 2026 (Oct 2026), our team | Content agent model, Drift sentinel signal, planned retraining gate |
+| `rakshaka/modeling.py` (`make_classifier`, `preprocess_text`, `char_ngram_oov_ratio`, `retrain_gate`) | Rakshaka AI, our earlier prototype (Oct 2026, github.com/geemalfernando/Rakshaka_AI), our team | Content agent model, Drift sentinel signal, planned retraining gate |
 | `src/make_data.py`, `data/extra_*.csv`, `rakshaka/data.py` | same | Training and test data |
 | `src/api.py`, `app/dashboard.py`, `scripts/` | same | Single-model prototype; not part of the multi-agent pipeline; the review desk will be adapted |
 | Everything in `project/` and `tests/test_agents.py` | New, built for AI Catalyst from 16 Nov 2026 | The multi-agent system, baseline and benchmark |
