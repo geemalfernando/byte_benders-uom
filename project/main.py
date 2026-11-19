@@ -4,8 +4,8 @@
     python project/main.py check "message text" [--sender SLKPOST] [--json]
     python project/main.py demo                        # samples/input/*.txt -> samples/output/*.json
     python project/main.py benchmark                   # multi-agent vs single-agent -> reports/
-    python project/main.py human-sheet                 # blind sheet for the human baseline
-    python project/main.py human-score FILE            # score a filled human sheet
+    python project/main.py human-sheet                 # balanced 40-message sheet + rating page (rate.html)
+    python project/main.py human-score FILE [FILE...]  # score rater result codes vs both systems
     python project/main.py serve [--port 8080]         # JSON API: POST /check, GET /health
     python project/main.py review                      # UNCERTAIN messages waiting for a human
     python project/main.py label ID scam|legitimate    # reviewer decision (+ blocklist for scam links)
@@ -30,7 +30,7 @@ from pathlib import Path
 PROJECT = Path(__file__).resolve().parent
 sys.path.insert(0, str(PROJECT))
 
-from rakshaka_agents import benchmark, learning, llm  # noqa: E402
+from rakshaka_agents import benchmark, human, learning, llm  # noqa: E402
 from rakshaka_agents.orchestrator import Orchestrator  # noqa: E402
 from rakshaka_agents.training import build_team, train  # noqa: E402
 
@@ -132,7 +132,7 @@ def main() -> None:
     sub.add_parser("benchmark")
     sub.add_parser("human-sheet")
     h = sub.add_parser("human-score")
-    h.add_argument("file", type=Path)
+    h.add_argument("files", type=Path, nargs="+")
     sub.add_parser("review")
     lb = sub.add_parser("label")
     lb.add_argument("message_id")
@@ -154,10 +154,10 @@ def main() -> None:
         report = benchmark.main()
         print((PROJECT / "reports" / "benchmark.md").read_text(encoding="utf-8"))
     elif args.cmd == "human-sheet":
-        path = benchmark.write_human_sheet(PROJECT / "reports" / "human_baseline" / "sheet.csv")
-        print(f"Blind sheet: {path}\nAnswer key (keep away from raters): {path.with_name('sheet_key.csv')}")
+        print(json.dumps(human.write_sheet(), indent=2))
     elif args.cmd == "human-score":
-        print(json.dumps(benchmark.score_human(args.file), indent=2))
+        human.score_humans(args.files)
+        print((PROJECT / "reports" / "human_baseline" / "results.md").read_text(encoding="utf-8"))
     elif args.cmd == "review":
         items = learning.pending()
         print(f"{len(items)} message(s) waiting for review")

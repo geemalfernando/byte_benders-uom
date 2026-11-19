@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rakshaka AI: scam message check (human study)</title>
+<style>
+  :root { --ink:#1b1b1a; --muted:#5d5d58; --line:#d9d8d2; --bg:#faf9f6; --card:#fff; --accent:#1c5cab;
+          --scam:#b3261e; --unsure:#8a5a00; --safe:#1e6b35; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#f0efec; --muted:#b5b4ab; --line:#3a3a37; --bg:#1a1a19; --card:#242422; --accent:#6da7ec;
+            --scam:#f2857d; --unsure:#e0b55c; --safe:#7cc98f; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Sinhala","Noto Sans Tamil",sans-serif;
+         color:var(--ink); background:var(--bg); }
+  main { max-width:620px; margin:0 auto; padding:20px 16px 48px; }
+  h1 { font-size:1.35rem; margin:0 0 4px; }
+  .sub { color:var(--muted); margin:0 0 18px; font-size:.95rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px; margin-bottom:14px; }
+  label { display:block; font-weight:600; margin:12px 0 6px; }
+  input[type=text], select { width:100%; font:inherit; padding:10px 12px; border:1px solid var(--line); border-radius:8px;
+         background:var(--bg); color:var(--ink); }
+  .check { display:flex; gap:10px; align-items:flex-start; font-weight:400; }
+  .check input { margin-top:5px; width:20px; height:20px; }
+  button { font:inherit; cursor:pointer; border-radius:10px; border:1px solid var(--line); padding:14px 16px;
+           background:var(--card); color:var(--ink); }
+  button.primary { background:var(--accent); border-color:var(--accent); color:#fff; font-weight:600; width:100%; }
+  button:disabled { opacity:.45; cursor:not-allowed; }
+  button:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+  .progress { height:6px; background:var(--line); border-radius:3px; overflow:hidden; margin:6px 0 16px; }
+  .progress > div { height:100%; background:var(--accent); width:0; transition:width .2s; }
+  .count { color:var(--muted); font-size:.9rem; }
+  .sender { color:var(--muted); font-size:.9rem; margin-bottom:6px; }
+  .msg { font-size:1.12rem; white-space:pre-wrap; word-break:break-word; padding:14px; border-radius:10px;
+         background:var(--bg); border:1px solid var(--line); }
+  .choices { display:grid; gap:10px; margin-top:16px; }
+  .choices button { text-align:left; font-weight:600; font-size:1.05rem; padding:16px; border-width:2px; }
+  .c-scam { border-color:var(--scam); color:var(--scam); }
+  .c-unsure { border-color:var(--unsure); color:var(--unsure); }
+  .c-safe { border-color:var(--safe); color:var(--safe); }
+  .c-skip { font-weight:400 !important; font-size:.95rem !important; color:var(--muted); }
+  .choices small { display:block; font-weight:400; color:var(--muted); font-size:.85rem; }
+  textarea { width:100%; min-height:110px; font:13px/1.4 ui-monospace,Menlo,monospace; padding:10px; border-radius:8px;
+             border:1px solid var(--line); background:var(--bg); color:var(--ink); }
+  .row { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+  .row > * { flex:1 1 160px; }
+  a.btn { display:block; text-align:center; text-decoration:none; padding:14px 16px; border-radius:10px; font-weight:600;
+          background:#1e8e3e; color:#fff; }
+  .note { color:var(--muted); font-size:.9rem; }
+  .hidden { display:none; }
+  ul { padding-left:20px; margin:8px 0; }
+</style>
+</head>
+<body>
+<main>
+  <section id="intro">
+    <h1>Is this message a scam?</h1>
+    <p class="sub">A 10-minute study for Rakshaka AI (University of Moratuwa, Innodata AI Catalyst 2026).</p>
+    <div class="card">
+      <p style="margin-top:0">You will see <strong>40 SMS or WhatsApp messages</strong>, one at a time. For each one, choose:</p>
+      <ul>
+        <li><strong>Scam</strong>: you would not trust it</li>
+        <li><strong>Not sure</strong>: you would check with someone first</li>
+        <li><strong>Safe</strong>: a normal, genuine message</li>
+      </ul>
+      <p>Answer on your own, as you would if the message arrived on your phone. Don't search online or ask anyone.
+         The page times each answer. If a message is in a language you can't read, choose <em>"I can't read this language"</em>.</p>
+      <p class="note">පණිවිඩ 40ක් පෙන්වයි. එක් එක් පණිවිඩය වංචාවක්ද, විශ්වාස නැද්ද, නැත්නම් ආරක්ෂිතද කියා තෝරන්න. අන්තර්ජාලය හෝ වෙනත් අයගෙන් උදව් ගන්න එපා.<br>
+         40 செய்திகள் காட்டப்படும். ஒவ்வொன்றும் மோசடியா, உறுதியில்லையா, பாதுகாப்பானதா எனத் தேர்வு செய்யுங்கள்.</p>
+      <p class="note">The messages are made up for testing; none of them are real or sent to you. We only record your
+         initials, age group, your answers and how long each took. No name, number or other personal data.</p>
+      <label for="rater">Your initials (or a nickname)</label>
+      <input id="rater" type="text" maxlength="12" autocomplete="off" placeholder="e.g. NF">
+      <label for="age">Age group</label>
+      <select id="age">
+        <option value="">Choose…</option>
+        <option>18-29</option><option>30-49</option><option>50-64</option><option>65+</option>
+      </select>
+      <label class="check"><input id="consent" type="checkbox">
+        <span>I agree that my anonymous answers and timings can be used in this university project.</span></label>
+      <div style="margin-top:16px"><button id="start" class="primary" disabled>Start</button></div>
+    </div>
+  </section>
+
+  <section id="rate" class="hidden" aria-live="polite">
+    <div class="count" id="count"></div>
+    <div class="progress"><div id="bar"></div></div>
+    <div class="card">
+      <div class="sender" id="sender"></div>
+      <div class="msg" id="msg"></div>
+      <div class="choices">
+        <button class="c-scam" data-v="S">Scam <small>I would not trust this · වංචාවක් · மோசடி</small></button>
+        <button class="c-unsure" data-v="U">Not sure <small>I would check first · විශ්වාස නැත · உறுதியில்லை</small></button>
+        <button class="c-safe" data-v="F">Safe <small>A normal message · ආරක්ෂිතයි · பாதுகாப்பானது</small></button>
+        <button class="c-skip" data-v="X">I can't read this language</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="done" class="hidden">
+    <h1>Thank you!</h1>
+    <p class="sub">Please send the result code below to the person who gave you this link (WhatsApp is easiest).</p>
+    <div class="card">
+      <label for="code" style="margin-top:0">Your result code</label>
+      <textarea id="code" readonly></textarea>
+      <div class="row">
+        <button id="copy">Copy code</button>
+        <a id="wa" class="btn" target="_blank" rel="noopener">Send on WhatsApp</a>
+      </div>
+      <p class="note" id="copied"></p>
+      <p class="note">The code only holds your initials, age group, answers and timings. Correct answers are not shown, so
+         the study stays fair for the next person.</p>
+    </div>
+  </section>
+</main>
+<script>
+const ITEMS = /*ITEMS*/[];
+const KEY = "rakshaka-human-study-v1";
+const $ = id => document.getElementById(id);
+let state = null;
+
+function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+function load() { try { return JSON.parse(localStorage.getItem(KEY) || "null"); } catch (e) { return null; } }
+
+// order differs per rater (seeded by initials) to spread order effects
+function shuffled(seedText) {
+  let h = 2166136261;
+  for (const ch of seedText) { h ^= ch.codePointAt(0); h = Math.imul(h, 16777619) >>> 0; }
+  const rnd = () => { h ^= h << 13; h ^= h >>> 17; h ^= h << 5; return ((h >>> 0) % 100000) / 100000; };
+  const order = ITEMS.map((_, i) => i);
+  for (let i = order.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [order[i], order[j]] = [order[j], order[i]]; }
+  return order;
+}
+
+function validIntro() {
+  $("start").disabled = !($("rater").value.trim() && $("age").value && $("consent").checked);
+}
+["rater", "age", "consent"].forEach(id => $(id).addEventListener("input", validIntro));
+$("consent").addEventListener("change", validIntro);
+
+$("start").addEventListener("click", () => {
+  const rater = $("rater").value.trim().replace(/[^A-Za-z0-9_-]/g, "").slice(0, 12) || "R";
+  state = { rater, age: $("age").value, order: shuffled(rater + $("age").value), pos: 0, answers: [] };
+  save(); show();
+});
+
+let shownAt = 0;
+function show() {
+  $("intro").classList.add("hidden");
+  if (state.pos >= state.order.length) return finish();
+  $("rate").classList.remove("hidden");
+  const item = ITEMS[state.order[state.pos]];
+  $("count").textContent = `Message ${state.pos + 1} of ${state.order.length}`;
+  $("bar").style.width = `${100 * state.pos / state.order.length}%`;
+  $("sender").textContent = item.sender ? `From: ${item.sender}` : "From: unknown number";
+  $("msg").textContent = item.text;
+  shownAt = performance.now();
+  window.scrollTo(0, 0);
+}
+
+document.querySelectorAll(".choices button").forEach(b => b.addEventListener("click", () => {
+  if (!state) return;
+  const secs = Math.min(600, (performance.now() - shownAt) / 1000);
+  state.answers.push([ITEMS[state.order[state.pos]].id, b.dataset.v, secs.toFixed(1)]);
+  state.pos += 1; save(); show();
+}));
+
+function finish() {
+  $("rate").classList.add("hidden");
+  $("done").classList.remove("hidden");
+  const code = `RKH1|${state.rater}|${state.age}|` + state.answers.map(a => a.join(":")).join(";");
+  $("code").value = code;
+  $("wa").href = "https://wa.me/?text=" + encodeURIComponent("Rakshaka study result: " + code);
+}
+
+$("copy").addEventListener("click", async () => {
+  const box = $("code");
+  try { await navigator.clipboard.writeText(box.value); $("copied").textContent = "Copied."; }
+  catch (e) { box.focus(); box.select(); $("copied").textContent = "Select the text above and copy it."; }
+});
+
+state = load();
+if (state && state.order && state.order.length === ITEMS.length) show();
+</script>
+</body>
+</html>

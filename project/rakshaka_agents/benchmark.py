@@ -162,35 +162,3 @@ def to_markdown(r: dict) -> str:
     out += ["", f"Compute cost at full load on a USD {c['server_usd_per_month']}/month server: "
                 f"USD {c['multi_agent_usd_per_1000_msgs_at_full_load']} per 1,000 messages ({c['note']})."]
     return "\n".join(out) + "\n"
-
-
-def write_human_sheet(path: Path, n: int = 40, seed: int = 11) -> Path:
-    """Blind sheet for the human baseline: same messages, shuffled, labels hidden, timer columns."""
-    import random
-    pool = [dict(r, dataset=name) for name, p in DATASETS.items() for r in load_rows(p)]
-    random.Random(seed).shuffle(pool)
-    sample = pool[:n]
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with open(path, "w", newline="", encoding="utf-8") as handle:
-        w = csv.writer(handle)
-        w.writerow(["id", "text", "sender", "your_verdict (SCAM/UNSURE/SAFE)", "seconds_taken", "rater_id"])
-        for i, r in enumerate(sample):
-            w.writerow([i, r["text"], r.get("sender", ""), "", "", ""])
-    key = path.with_name(path.stem + "_key.csv")
-    with open(key, "w", newline="", encoding="utf-8") as handle:
-        w = csv.writer(handle)
-        w.writerow(["id", "label", "dataset", "language"])
-        for i, r in enumerate(sample):
-            w.writerow([i, r["label"], r["dataset"], r["language"]])
-    return path
-
-
-def score_human(sheet: Path) -> dict:
-    key = {r["id"]: r for r in csv.DictReader(open(sheet.with_name(sheet.stem.replace("_filled", "") + "_key.csv"), encoding="utf-8"))}
-    rows, results = [], []
-    for r in csv.DictReader(open(sheet, encoding="utf-8")):
-        verdict = {"SCAM": "SCAM", "UNSURE": "UNCERTAIN", "SAFE": "LIKELY_SAFE"}.get(
-            r["your_verdict (SCAM/UNSURE/SAFE)"].strip().upper(), "ERROR")
-        rows.append({"label": key[r["id"]]["label"]})
-        results.append({"verdict": verdict, "latency_ms": float(r["seconds_taken"] or 0) * 1000})
-    return score(rows, results)
