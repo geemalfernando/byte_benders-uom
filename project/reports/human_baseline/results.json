@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T14:14:33+00:00",
+  "generated_at": "2026-11-19T14:33:30+00:00",
   "n_messages": 40,
   "n_raters": 1,
   "raters": [
@@ -53,8 +53,8 @@
       "review_load": 0.275,
       "no_answer": 0.0,
       "decided_balanced_accuracy": 1.0,
-      "latency_p50_ms": 7.67,
-      "latency_p95_ms": 8.94
+      "latency_p50_ms": 7.45,
+      "latency_p95_ms": 10.93
     },
     "single_agent": {
       "n": 40,
@@ -68,8 +68,8 @@
       "review_load": 0.325,
       "no_answer": 0.0,
       "decided_balanced_accuracy": 1.0,
-      "latency_p50_ms": 1.56,
-      "latency_p95_ms": 2.61
+      "latency_p50_ms": 1.57,
+      "latency_p95_ms": 2.59
     }
   }
 }

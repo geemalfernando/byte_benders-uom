@@ -31,8 +31,9 @@ comparison is like for like.
 2. Share the rating page: https://claude.ai/artifact/RbskfqH4u3itNjybroGJ2A (private until the owner turns on
    sharing from claude.ai), or send the `rate.html` file itself, which works offline in any phone browser.
 3. Ask each rater to do it alone, on their phone, without searching or asking anyone. It takes about 10 minutes.
-4. Each rater sends back the result code (`RKH1|…`). Save each one as a text file, for example
-   `project/reports/human_baseline/raters/NF.txt`.
+4. Each rater sends back the result code (`RKH1|…`). **Replace the name in the code with an anonymous ID**
+   (R01, R02, …) before saving it, for example `project/reports/human_baseline/raters/R02.txt`. The repo is
+   public and the page promises anonymous answers; keep the ID-to-person list offline.
 5. Score: `python project/main.py human-score project/reports/human_baseline/raters/*.txt` →
    `project/reports/human_baseline/results.{json,md}`.
 6. Commit the result files and the rater codes, and update the README and proposal numbers from `results.md`.
