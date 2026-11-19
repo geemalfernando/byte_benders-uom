@@ -24,8 +24,8 @@ Repository: https://github.com/geemalfernando/byte_benders-uom (private)
 
 ## Organiser steps
 
-- [ ] Repo named `team_name-university` (`byte_benders-uom`)
-- [ ] Add the Innodata GitHub account **AI-Catalyst-Innodata** as a collaborator (Settings → Collaborators → Add people)
+- [x] Repo named `team_name-university` (`byte_benders-uom`)
+- [x] Invited the Innodata GitHub account **AI-Catalyst-Innodata** as a collaborator (19 Nov; pending their acceptance)
 - [ ] Share the repo link with the organisers through the channel given at the 16 Nov introductory session
 - [ ] Confirm the fourth team member's name in `docs/Proposal.docx`
 - [ ] Keep the repo updated; organisers must keep access at all times
