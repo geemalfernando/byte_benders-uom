@@ -72,6 +72,28 @@ class OrchestratorTests(unittest.TestCase):
         self.assertEqual(result["agents"]["content"]["status"], "error")
 
 
+class HumanBaselineTests(unittest.TestCase):
+    def test_sheet_is_balanced_and_page_has_no_labels(self):
+        from rakshaka_agents.human import build_sheet
+        sheet = build_sheet()
+        self.assertEqual(len(sheet), 40)
+        self.assertEqual(sum(r["label"] == "scam" for r in sheet), 20)
+        page = (Path(__file__).resolve().parents[1] / "project" / "reports" / "human_baseline" / "rate.html").read_text(encoding="utf-8")
+        self.assertNotIn('"label"', page)
+        self.assertNotIn('"legitimate"', page)
+
+    def test_result_code_parses(self):
+        import tempfile
+        from rakshaka_agents.human import parse_result
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "r.txt"
+            path.write_text("Rakshaka study result: RKH1|NF|65+|3:S:4.2;7:X:1.0;9:F:2.5", encoding="utf-8")
+            result = parse_result(path)
+        self.assertEqual(result["rater"], "NF")
+        self.assertEqual(result["answers"][3], ("SCAM", 4.2))
+        self.assertEqual(result["answers"][7][0], "SKIPPED")
+
+
 class RateLimitTests(unittest.TestCase):
     def test_limiter_blocks_after_quota(self):
         sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "project"))
