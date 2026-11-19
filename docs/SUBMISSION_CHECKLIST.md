@@ -1,6 +1,6 @@
 # Submission checklist (AI Catalyst 2026, University Track)
 
-Repository: https://github.com/geemalfernando/byte_benders-uom (private)
+Repository: https://github.com/geemalfernando/byte_benders-uom (public)
 
 ## Required structure
 
