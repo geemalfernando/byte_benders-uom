@@ -26,3 +26,13 @@ __pycache__/
 
 # Streamlit secrets (admin token on Streamlit Cloud / local tests): never commit
 .streamlit/secrets.toml
+
+# AI Catalyst multi-agent layer: generated at runtime
+/project/models/*
+/project/runtime/
+/project/traces/traces.jsonl
+/project/reports/human_baseline/sheet_key.csv
+/project/traces/benchmark_traces.jsonl
+/project/models_previous/
+/project/models_candidate/
+/project/models_swap/
