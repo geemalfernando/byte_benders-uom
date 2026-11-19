@@ -83,7 +83,7 @@ load on the independent set (41.5% vs 29.2%). The human baseline has not been ru
 | `project/reports/` | Benchmark results and the human-baseline sheet |
 | `docs/Proposal.docx`, `docs/Workflow.md`, `docs/PROJECT_DETAILS.md` | Proposal, workflow, technical details and disclosures |
 | `docs/PROJECT_PLAN.md`, `docs/SUBMISSION_CHECKLIST.md` | Complete project plan (milestones, risks) and submission checklist |
-| `rakshaka/`, `src/`, `app/`, `scripts/` | **Pre-existing Rakshaka AI code (Geveo Ignite 2026), reused and disclosed:** classifier, data generator, FastAPI/Streamlit prototype |
+| `rakshaka/`, `src/`, `app/`, `scripts/` | **Pre-existing Rakshaka AI code, reused and disclosed:** classifier, data generator, FastAPI/Streamlit prototype |
 | `docs/LEGACY_README.md` | README of the pre-existing single-model prototype |
 | `project-demo.mp4` | Demo video, due with the Phase 1 MVP (29 Nov) |
 
@@ -91,7 +91,7 @@ load on the independent set (41.5% vs 29.2%). The human baseline has not been ru
 
 This repository was cloned (not forked) from our earlier project
 [geemalfernando/Rakshaka_AI](https://github.com/geemalfernando/Rakshaka_AI). That project is a single-model
-classifier with drift monitoring, built for Geveo Ignite 2026, and its git history is kept here so that
+classifier with drift monitoring, and its git history is kept here so that
 pre-existing work can be told apart from new work. The multi-agent system in `project/` was built for AI
 Catalyst. Third-party libraries, data sources and AI tools are listed in
 [docs/PROJECT_DETAILS.md](docs/PROJECT_DETAILS.md).
