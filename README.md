@@ -85,7 +85,7 @@ load on the independent set (41.5% vs 29.2%). The human baseline has not been ru
 | `docs/PROJECT_PLAN.md`, `docs/SUBMISSION_CHECKLIST.md` | Complete project plan (milestones, risks) and submission checklist |
 | `rakshaka/`, `src/`, `app/`, `scripts/` | **Pre-existing Rakshaka AI code, reused and disclosed:** classifier, data generator, FastAPI/Streamlit prototype |
 | `docs/LEGACY_README.md` | README of the pre-existing single-model prototype |
-| `project-demo.mp4` | Demo video, due with the Phase 1 MVP (29 Nov) |
+| `project-demo.mp4` | **Early demo** (20 Nov, 2:41, captions, no voice-over), built from live runs by `docs/build/make_demo_video.py`. The full 5–10 minute demo comes with the MVP on 29 Nov |
 
 ## Disclosure
 

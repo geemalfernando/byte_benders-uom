@@ -12,7 +12,7 @@ Repository: https://github.com/geemalfernando/byte_benders-uom (public)
 | `docs/Proposal.docx` (≤ 10 pages) | 7 pages | ✅ |
 | `docs/Workflow.md` | yes | ✅ |
 | `docs/PROJECT_DETAILS.md` (incl. AI tool declaration) | yes | ✅ |
-| `project-demo.mp4` (MP4, H.264 + AAC, ≥720p, 5–10 min, ≤100 MB) | — | ⏳ due 29 Nov |
+| `project-demo.mp4` (MP4, H.264 + AAC, ≥720p, 5–10 min, ≤100 MB) | early demo, 2:41, 720p | ✅ early version; full 5–10 min version due 29 Nov |
 
 ## Deadlines
 
